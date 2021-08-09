@@ -54,14 +54,14 @@ public class LoginService {
 			throw new LoginPasswordRequiredException();
 		else if(login.getUser()==null)
 			throw new LoginUserRequired();
-		else 
+		else {
 			if(!userRepository.existsById(login.getUser().getId()))
 				throw new UserNotFoundException();
 			if(loginRepository.findByUser(login.getUser())!=null)
 				throw new LoginUserAlreadyMappedWithCredentialsException();
 			if(loginRepository.findByUserName(login.getUserName())!=null)
 				throw new LoginUserNameAlreadyExistsException();
-			
+		}
 		return loginRepository.save(login);
 	}
 
