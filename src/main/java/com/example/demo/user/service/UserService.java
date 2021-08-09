@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.constant.Constant;
 import com.example.demo.user.User;
-import com.example.demo.user.constant.Constant;
 import com.example.demo.user.exception.UserAlreadyExistsException;
 import com.example.demo.user.exception.UserNotFoundException;
 import com.example.demo.user.repository.UserRepository;

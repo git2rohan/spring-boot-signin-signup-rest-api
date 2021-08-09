@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.example.demo.user.constant.Constant;
+import com.example.demo.constant.Constant;
 
 @ControllerAdvice
 public class UserException {
